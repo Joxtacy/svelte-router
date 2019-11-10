@@ -11,7 +11,12 @@ export let component = undefined;
 const matchPath = (pathname, options) => {
     const { exact, path } = options;
 
+    if ($routeStore.rendered) {
+        return;
+    }
+
     if (!path) {
+        $routeStore.rendered = true;
         return {
             path,
             url: pathname,
@@ -32,6 +37,7 @@ const matchPath = (pathname, options) => {
         return;
     }
 
+    $routeStore.rendered = true;
     return {
         path,
         url,

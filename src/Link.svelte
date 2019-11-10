@@ -10,6 +10,7 @@ export let replace = false;
 const handleClick = (event) => {
     replace ? history.replaceState({}, "", to) : history.pushState({}, "", to);
     $routeStore.path = to;
+    $routeStore.rendered = false;
 }
 </script>
 

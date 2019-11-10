@@ -79,8 +79,10 @@ This component is used to change the url. It takes one prop called `to` and is a
 
 ## Know limitations
 
-* It can only handle first order paths.
-    The following example would render both Foo and Foobar when the path becomes `/foo/bar`. If the paths are completely separate it would work fine (i.e. `/foo/bar` and `/about/me`).
+* You need to specify the `Route` components with the most specific path on top, like in the example below. Otherwise the top most one would be rendered on all sub paths as well.
+
+#### Good example ✅
+The most specific path is on top and will not be rendered on `/foo`.
 ```js
 <script>
 import { Link, Route, Router } from "@joxtacy/svelte-router";
@@ -104,6 +106,35 @@ import { Link, Route, Router } from "@joxtacy/svelte-router";
     </Route>
     <Route path={"/foo"}>
         <h2>Foo</h2>
+    </Route>
+</Router>
+```
+
+#### Bad example ❌
+Here the `/foo` path would also be rendered when the url is `/foo/bar`.
+```js
+<script>
+import { Link, Route, Router } from "@joxtacy/svelte-router";
+</script>
+
+<Router>
+    <Link to={"/"}>
+        <h2>Home</h2>
+    </Link>
+    <Link to={"/foo"}>
+        <h2>foo</h2>
+    </Link>
+    <Link to={"/foo/bar"}>
+        <h2>foobar</h2>
+    </Link>
+    <Route exact path={"/"}>
+        <h2>This is home</h2>
+    </Route>
+    <Route path={"/foo"}>
+        <h2>Foo</h2>
+    </Route>
+    <Route path={"/foo/bar"}>
+        <h2>Foobar</h2>
     </Route>
 </Router>
 ```

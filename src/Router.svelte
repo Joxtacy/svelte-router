@@ -4,7 +4,8 @@ import { writable } from "svelte/store";
 import { routeKey } from "./contexts.js";
 
 const routeStore = writable({
-    path: "/"
+    path: "/",
+    rendered: false
 });
 
 setContext(routeKey, routeStore);
