@@ -1,8 +1,14 @@
 {
   "name": "@joxtacy/svelte-router",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Simple router for Svelte apps",
-  "keywords": ["svelte", "routing", "router", "route", "spa"],
+  "keywords": [
+    "svelte",
+    "routing",
+    "router",
+    "route",
+    "spa"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
