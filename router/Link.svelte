@@ -4,7 +4,7 @@ import { routeKey } from "./contexts.js";
 
 const routeStore = getContext(routeKey);
 
-export let to = "";
+export let to = "/";
 export let replace = false;
 
 const handleClick = (event) => {

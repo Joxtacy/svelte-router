@@ -4,9 +4,9 @@ import { routeKey } from "./contexts.js";
 
 const routeStore = getContext(routeKey);
 
-export let path;
+export let path = "/";
 export let exact = false;
-export let component;
+export let component = undefined;
 
 const matchPath = (pathname, options) => {
     const { exact, path } = options;
