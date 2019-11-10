@@ -141,6 +141,8 @@ import { Link, Route, Router } from "@joxtacy/svelte-router";
 
 * It does not handle variables in the path.
 
+* You can only have one `Router` in your app.
+
 ## Feature requests
 
 If you have any feature requests just hit me up or place an issue on the Github repo!
