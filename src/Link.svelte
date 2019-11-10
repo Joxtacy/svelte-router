@@ -20,3 +20,12 @@ const handleClick = (event) => {
     <slot><em>Some link</em></slot>
 </a>
 
+<style>
+a {
+    color: inherit;
+    text-decoration: none;
+}
+a:visited {
+    color: inherit;
+}
+</style>
