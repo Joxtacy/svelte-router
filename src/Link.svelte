@@ -8,7 +8,9 @@ export let to = "/";
 export let replace = false;
 
 const handleClick = (event) => {
-    replace ? history.replaceState({}, "", to) : history.pushState({}, "", to);
+    if ($routeStore.path !== to) {
+        replace ? history.replaceState({}, "", to) : history.pushState({}, "", to);
+    }
     $routeStore.path = to;
     $routeStore.rendered = false;
 }

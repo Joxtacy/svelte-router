@@ -12,6 +12,7 @@ setContext(routeKey, routeStore);
 
 const handlePopState = () => {
     $routeStore.path = location.pathname;
+    $routeStore.rendered = false;
 }
 </script>
 
