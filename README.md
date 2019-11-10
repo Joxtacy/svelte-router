@@ -76,3 +76,40 @@ This component is used to change the url. It takes one prop called `to` and is a
     <!-- Markup goes here -->
 </Link>
 ```
+
+## Know limitations
+
+* It can only handle first order paths.
+    The following example would render both Foo and Foobar when the path becomes `/foo/bar`. If the paths are completely separate it would work fine (i.e. `/foo/bar` and `/about/me`).
+```js
+<script>
+import { Link, Route, Router } from "@joxtacy/svelte-router";
+</script>
+
+<Router>
+    <Link to={"/"}>
+        <h2>Home</h2>
+    </Link>
+    <Link to={"/foo"}>
+        <h2>foo</h2>
+    </Link>
+    <Link to={"/foo/bar"}>
+        <h2>foobar</h2>
+    </Link>
+    <Route exact path={"/"}>
+        <h2>This is home</h2>
+    </Route>
+    <Route path={"/foo/bar"}>
+        <h2>Foobar</h2>
+    </Route>
+    <Route path={"/foo"}>
+        <h2>Foo</h2>
+    </Route>
+</Router>
+```
+
+* It does not handle variables in the path.
+
+## Feature requests
+
+If you have any feature requests just hit me up or place an issue on the Github repo!
