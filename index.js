@@ -1,6 +1,6 @@
-import Link from "./router/Link.svelte";
-import Route from "./router/Route.svelte";
-import Router from "./router/Router.svelte";
+import Link from "./src/Link.svelte";
+import Route from "./src/Route.svelte";
+import Router from "./src/Router.svelte";
 
 export {
     Link,
