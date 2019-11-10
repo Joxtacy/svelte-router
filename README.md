@@ -39,11 +39,11 @@ This component provides context based routing for the `Link` and `Route` compone
 ### Route
 This component is used to render a component or some markup when its path matches the url. It takes a prop called `path` which is the path that when matched the `Route` will render. 
 
-| Prop      | Required | Default     | Description |
-| --------- |:--------:|:-----------:| ----------- |
-| path      | no       | `"/"`       |             |
-| exact     | no       | `false`     |             |
-| component | no       | `undefined` |             |
+| Prop      | Required | Default     | Description                                                                |
+| --------- |:--------:|:-----------:| -------------------------------------------------------------------------- |
+| path      | no       | `"/"`       | The path relative to the origin that the `Route` component will listen to. |
+| exact     | no       | `false`     | True if it should match on the exact path only.                            |
+| component | no       | `undefined` | The component to be rendered.                                              |
 
 #### Examples
 
