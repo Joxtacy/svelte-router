@@ -8,6 +8,10 @@
   },
   "author": "Joxtacy",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Joxtacy/svelte-router/"
+  },
   "peerDependencies": {
     "svelte": "3.x"
   }
