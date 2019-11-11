@@ -1,8 +1,5 @@
 <script>
-import { getContext } from "svelte";
-import { routeKey } from "./contexts.js";
-
-const routeStore = getContext(routeKey);
+import routeStore from "./stores.js";
 
 export let to = "/";
 export let replace = false;
