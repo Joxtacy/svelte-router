@@ -1,7 +1,7 @@
 import { writable } from "svelte/store";
 
 export default writable({
-    path: "/",
+    path: window.location.pathname,
     rendered: false
 });
 
