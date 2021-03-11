@@ -77,7 +77,7 @@ This component is used to change the url. It takes one prop called `to` and is a
 </Link>
 ```
 
-## Know limitations
+## Known limitations
 
 * You need to specify the `Route` components with the most specific path on top, like in the example below. Otherwise the top most one would be rendered on all sub paths as well.
 
